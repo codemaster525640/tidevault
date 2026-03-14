@@ -1,0 +1,10 @@
+/target/
+/vendor/
+**/*.rs.bk
+.idea/
+.vscode/
+/data/
+/_tidevault_snapshot/
+scripts/build_git_history.py
+scripts/rename_to_tidevault.py
+*.pdb

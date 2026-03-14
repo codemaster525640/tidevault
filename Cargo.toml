@@ -1,0 +1,77 @@
+[workspace]
+resolver = "2"
+members = [
+    "domains/tv-kernel",
+    "domains/tv-ledger",
+    "domains/tv-accounts",
+    "domains/tv-payments",
+    "domains/tv-rails",
+    "domains/tv-fx",
+    "domains/tv-settlement",
+    "domains/tv-reconcile",
+    "domains/tv-fraud",
+    "domains/tv-disputes",
+    "domains/tv-compliance",
+    "domains/tv-webhooks",
+    "domains/tv-pricing",
+    "domains/tv-limits",
+    "domains/tv-routing",
+    "domains/tv-reporting",
+    "domains/tv-auth",
+    "domains/tv-audit",
+    "domains/tv-notify",
+    "domains/tv-workflow",
+    "domains/tv-treasury",
+    "domains/tv-catalog",
+    "platform/tv-store",
+    "platform/tv-bus",
+    "apps/tv-engine",
+    "tests",
+]
+
+[workspace.package]
+version = "0.3.0"
+edition = "2021"
+license = "MIT"
+authors = ["Tidevault Engineers"]
+description = "Tidevault multi-rail payment clearing and double-entry ledger platform"
+
+[workspace.dependencies]
+serde = { version = "1.0.210", default-features = false, features = ["std"] }
+serde_json = "1.0.128"
+chrono = { version = "0.4.38", default-features = false, features = ["clock", "std"] }
+uuid = { version = "=1.11.0", features = ["v4"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+sha2 = "=0.10.8"
+hex = "0.4.3"
+rust_decimal = { version = "1.36.0", default-features = false, features = ["std"] }
+tv-kernel = { path = "domains/tv-kernel" }
+tv-ledger = { path = "domains/tv-ledger" }
+tv-accounts = { path = "domains/tv-accounts" }
+tv-payments = { path = "domains/tv-payments" }
+tv-rails = { path = "domains/tv-rails" }
+tv-fx = { path = "domains/tv-fx" }
+tv-settlement = { path = "domains/tv-settlement" }
+tv-reconcile = { path = "domains/tv-reconcile" }
+tv-fraud = { path = "domains/tv-fraud" }
+tv-disputes = { path = "domains/tv-disputes" }
+tv-compliance = { path = "domains/tv-compliance" }
+tv-webhooks = { path = "domains/tv-webhooks" }
+tv-pricing = { path = "domains/tv-pricing" }
+tv-limits = { path = "domains/tv-limits" }
+tv-routing = { path = "domains/tv-routing" }
+tv-reporting = { path = "domains/tv-reporting" }
+tv-auth = { path = "domains/tv-auth" }
+tv-audit = { path = "domains/tv-audit" }
+tv-notify = { path = "domains/tv-notify" }
+tv-workflow = { path = "domains/tv-workflow" }
+tv-treasury = { path = "domains/tv-treasury" }
+tv-catalog = { path = "domains/tv-catalog" }
+tv-store = { path = "platform/tv-store" }
+tv-bus = { path = "platform/tv-bus" }
+tv-engine = { path = "apps/tv-engine" }
+
+[profile.release]
+lto = false
+codegen-units = 16
