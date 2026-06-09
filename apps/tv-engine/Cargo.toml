@@ -1,0 +1,39 @@
+        [package]
+        name = "tv-engine"
+        version.workspace = true
+        edition.workspace = true
+        license.workspace = true
+        authors.workspace = true
+
+        [dependencies]
+        serde = { workspace = true }
+        serde_json = { workspace = true }
+        chrono = { workspace = true }
+        tracing = { workspace = true }
+        rust_decimal = { workspace = true }
+        tv-kernel = { workspace = true }
+        tv-store = { workspace = true }
+        tv-bus = { workspace = true }
+        tv-ledger = { workspace = true }
+tv-accounts = { workspace = true }
+tv-payments = { workspace = true }
+tv-rails = { workspace = true }
+tv-fx = { workspace = true }
+tv-settlement = { workspace = true }
+tv-reconcile = { workspace = true }
+tv-fraud = { workspace = true }
+tv-disputes = { workspace = true }
+tv-compliance = { workspace = true }
+tv-webhooks = { workspace = true }
+tv-pricing = { workspace = true }
+tv-limits = { workspace = true }
+tv-routing = { workspace = true }
+tv-reporting = { workspace = true }
+tv-auth = { workspace = true }
+tv-audit = { workspace = true }
+tv-notify = { workspace = true }
+tv-workflow = { workspace = true }
+tv-treasury = { workspace = true }
+tv-catalog = { workspace = true }
+
+[dev-dependencies]
