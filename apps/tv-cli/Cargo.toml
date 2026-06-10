@@ -1,0 +1,16 @@
+[package]
+name = "tv-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "tvctl"
+path = "src/main.rs"
+
+[dependencies]
+tracing-subscriber = { workspace = true }
+rust_decimal = { workspace = true }
+tv-kernel = { workspace = true }
+tv-engine = { workspace = true }
