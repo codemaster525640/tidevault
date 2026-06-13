@@ -1,0 +1,19 @@
+[package]
+name = "tidevault-tests"
+version = "0.3.0"
+edition = "2021"
+publish = false
+
+[dev-dependencies]
+tv-engine = { path = "../apps/tv-engine" }
+tv-kernel = { path = "../domains/tv-kernel" }
+tv-payments = { path = "../domains/tv-payments" }
+tv-ledger = { path = "../domains/tv-ledger" }
+tv-fraud = { path = "../domains/tv-fraud" }
+tv-limits = { path = "../domains/tv-limits" }
+tv-routing = { path = "../domains/tv-routing" }
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+rust_decimal = "1.33"
+
+[lib]
+path = "src/lib.rs"
